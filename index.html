@@ -3,31 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; frame-src https://www.crazygames.com https://games.crazygames.com; base-uri 'none'; form-action 'none'">
   <title>La mia sala giochi</title>
   <link rel="stylesheet" href="sala.css">
+  <script defer src="sala.js"></script>
 </head>
 <body>
   <main>
     <h1>La mia sala giochi</h1>
-    <p class="stato">La sala è in preparazione. I giochi sono chiusi.</p>
+    <p class="stato">Scegli a cosa giocare.</p>
     <ul>
       <li>
         <div class="cover biliardo" aria-hidden="true"><span class="palla"><b>8</b></span></div>
         <h2 lang="en">8 Ball Pool Billiards Multiplayer</h2>
         <p>Prendi la mira e manda le palle in buca.</p>
+        <a class="gioca" id="avvia-biliardo" href="https://www.crazygames.com/it/game/8-ball-pool-billiards-multiplayer">Gioca a biliardo</a>
       </li>
       <li>
         <div class="cover nido" aria-hidden="true"><span class="uovo"></span></div>
         <h2 lang="en">Steal Eggs</h2>
         <p>Porta un uovo al sicuro e scopri chi nascerà.</p>
+        <a class="gioca" href="https://www.crazygames.com/it/game/steal-a-eggs" aria-label="Gioca a Steal Eggs su CrazyGames">Gioca su CrazyGames <span aria-hidden="true">↗</span></a>
       </li>
       <li>
         <div class="cover labirinto" aria-hidden="true"><span class="quadrato"></span></div>
         <h2 lang="en">World’s Hardest Game</h2>
         <p>Guida il quadratino rosso tra le sfere blu.</p>
+        <a class="gioca" href="https://www.crazygames.com/it/game/worlds-hardest-game" aria-label="Gioca a World's Hardest Game su CrazyGames">Gioca su CrazyGames <span aria-hidden="true">↗</span></a>
       </li>
     </ul>
+    <footer>Durante il gioco CrazyGames può mostrare annunci e suggerire altri titoli.</footer>
   </main>
+  <dialog aria-labelledby="titolo-biliardo">
+    <header><h2 id="titolo-biliardo">8 Ball Pool</h2><form method="dialog"><button>Chiudi</button></form></header>
+    <div id="tavolo"></div>
+    <p>Problemi con il tavolo? <a href="https://www.crazygames.com/it/game/8-ball-pool-billiards-multiplayer">Apri il biliardo su CrazyGames</a></p>
+  </dialog>
 </body>
 </html>

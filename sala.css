@@ -13,6 +13,20 @@ ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15r
 .cover { aspect-ratio: 3 / 2; border-radius: 1rem; display: grid; place-items: center; overflow: hidden; }
 h2 { font-size: 1.45rem; letter-spacing: -.03em; margin: 1rem 0 .4rem; }
 li p { margin: 0; line-height: 1.5; }
+li { display: flex; flex-direction: column; align-items: stretch; }
+.gioca, button { font: inherit; font-weight: 700; border-radius: .65rem; cursor: pointer; }
+.gioca { padding: .8rem 1.1rem; background: #202945; color: white; text-decoration: none; align-self: flex-start; }
+li p { flex: 1; padding-bottom: 1.3rem; }
+.gioca:hover { background: #344572; }
+:focus-visible { outline: 3px solid #345bd2; outline-offset: 4px; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #cbd0de; color: #4e5870; line-height: 1.5; }
+dialog { width: min(62rem, 95vw); max-height: 96dvh; padding: 1rem; border: 0; border-radius: 1rem; color: inherit; }
+dialog::backdrop { background: #101526ce; }
+dialog header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: .7rem; }
+dialog h2, dialog p { margin: 0; }
+button { padding: .65rem .95rem; background: #eceff6; color: inherit; border: none; }
+#tavolo iframe { display: block; width: 100%; height: min(68dvh, 43rem); border: none; background: #202945; }
+dialog p { margin-top: .75rem; line-height: 1.5; }
 .biliardo { background: linear-gradient(130deg, #13786e, #45b795); }
 .palla { display: grid; place-items: center; width: 36%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(at 30% 18%, #748297, #192238 58%, #101526); box-shadow: 5px 8px 8px #16494080; transform: rotate(-16deg); }
 .palla b { display: grid; place-items: center; width: 49%; aspect-ratio: 1; border-radius: 50%; background: #fffbee; font-size: clamp(1.7rem, 3vw, 2.5rem); }
